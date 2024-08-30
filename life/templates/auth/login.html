@@ -1,0 +1,16 @@
+{% extends 'core/navbar.html' %}
+
+{% block content%}
+<h3>LOGIN</h3>
+ 
+
+<form method="POST" action="">
+    {% csrf_token %}
+    <input type="text" id="username" name="username">
+    <input type="text" id="password" name="password">
+    <input type="submit" value="Submit">
+
+</form>
+{{request.user}}
+
+{% endblock %}
